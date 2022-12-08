@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Dancing Script', cursive;
+}
+
+#index .mainSwiper .swiper-wrapper {
+    height: 100vh;
+    width: 100%;
+}
+#index .mainSwiper .swiper-wrapper .swiper-slide.pics {
+    padding: 100px;
+}
+#index .mainSwiper .swiper-wrapper .swiper-slide img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.introduction {
+    text-align: center;
+}
+.introduction p {
+    font-size: 48px;
+}
+.polaroid-frame {
+    width: 200px;
+    height: 250px;
+    transition: all .4s ease-in-out;
+    transform: rotate(8deg);
+    filter: grayscale(.9);
+}
+.polaroid-frame:hover {
+    scale: 1.5;
+    transform: rotate(0deg);
+    filter: grayscale(0);
+}
+img.polaroid {
+    border: solid #fff;
+    border-width:6px 6px 50px 6px;
+    box-shadow:1px 1px 5px #333; 
+    -webkit-box-shadow:1px 1px 5px #333;
+    -moz-box-shadow:1px 1px 5px #333;
+    object-fit: cover;
+    aspect-ratio: 2 / 2.5;
+}
+.collage {
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    grid-gap: 50px;
+}
+.frame {
+    width: 320px;
+    height: 320px;
+}
+.frame img {
+    object-fit: cover;
+    aspect-ratio: 1;
+}
