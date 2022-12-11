@@ -2,8 +2,16 @@
 
 @font-face {
     font-family: 'Aesthetic';
-    src: url(AestheticRegular-8M5dM.ttf) format('ttf'),
-        url(AestheticRegular-Yzraq) format('otf');
+    font-family: 'Bon';
+    src:    url(AestheticRegular-8M5dM.ttf) format('ttf'),
+            url(AestheticRegular-Yzraq.otf) format('otf'),
+            url(Bon\ Foyage.otf) format('opentype');
+     
+}
+
+@font-face {
+    font-family: 'Philosopher';
+    src: url(Philosopher-Regular.otf) format('otf');
 }
 
 body {
@@ -21,6 +29,10 @@ h2 {
 .first-slide {
     background: #181D31;
     animation: changingCl 7s ease-in-out;
+}
+
+.second-slide {
+    background: #F0E9D2;
 }
 
 .first-slide .text-1,
@@ -131,22 +143,26 @@ h2 {
 }
 
 .polaroid-frame {
-    width: 200px;
-    height: 250px;
+    width: 400px;
+    height: 500px;
     transition: all .4s ease-in-out;
-    transform: rotate(8deg);
+    transform: rotate(5deg);
     filter: grayscale(.9);
 }
 
 .polaroid-frame:hover {
-    scale: 1.5;
+    scale: 1.2;
     transform: rotate(0deg);
     filter: grayscale(0);
 }
 
+.polaroid-frame:hover > .polaroid-content {
+    opacity: 1;
+}
+
 img.polaroid {
     border: solid #fff;
-    border-width: 6px 6px 50px 6px;
+    border-width: 16px 16px 80px 16px;
     box-shadow: 1px 1px 5px #333;
     -webkit-box-shadow: 1px 1px 5px #333;
     -moz-box-shadow: 1px 1px 5px #333;
@@ -156,8 +172,8 @@ img.polaroid {
 
 .collage {
     display: grid;
-    grid-template-columns: repeat(12, auto);
-    grid-gap: 50px;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 200px;
 }
 
 .frame {
@@ -168,4 +184,61 @@ img.polaroid {
 .frame img {
     object-fit: cover;
     aspect-ratio: 1;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.banner img {
+    object-fit: cover;
+    height: 100%;
+    animation: zout 20s ease-in-out infinite alternate;
+    filter: grayscale(1);
+}
+
+@keyframes zout {
+    from {
+        scale: 1;
+        filter: grayscale(1);
+    } to {
+        scale: 1.2;
+        filter: grayscale(0);
+    }
+}
+
+.paragraph {
+    padding: 100px;
+}
+
+.paragraph h3 {
+    font-size: 56px;
+    color: #181D31;
+}
+
+.paragraph .content {
+    font-family: 'Bon';
+    font-size: 32px;
+    line-height: 1.5;
+    color: #181D31;
+}
+
+.polaroid-content {
+    inset: auto auto 20px 16px;
+    font-size: 24px;
+    font-family: 'Bon', serif;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+h4, .slide-2-content {
+    font-family: 'Bon';
+    font-size: 50px;
+}
+
+.slide-2-content {
+    font-size: 24px;
 }
