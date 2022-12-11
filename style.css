@@ -9,6 +9,16 @@
      
 }
 
+.swiper-pagination-bullet {
+	width: 4px;
+	height: 20px;
+	border-radius: 10px;
+}
+
+.swiper-pagination-bullet-active {
+	background: #678983;
+}
+
 @font-face {
     font-family: 'Philosopher';
     src: url(Philosopher-Regular.otf) format('otf');

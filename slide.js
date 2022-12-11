@@ -4,6 +4,11 @@ var swiper = new Swiper(".mainSwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  mousewheel: true,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  }
 });
 
 var swiperKem = new Swiper(".kemSwiper", {
