@@ -5,3 +5,14 @@ var swiper = new Swiper(".mainSwiper", {
     clickable: true,
   },
 });
+
+var swiperKem = new Swiper(".kemSwiper", {
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  speed: 800,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: true
+  }
+});

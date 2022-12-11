@@ -32,7 +32,11 @@ h2 {
 }
 
 .second-slide {
-    background: #F0E9D2;
+    background: #FFFBEB;
+}
+
+.fourth-slide {
+    background: #FFF;
 }
 
 .first-slide .text-1,
@@ -143,8 +147,8 @@ h2 {
 }
 
 .polaroid-frame {
-    width: 400px;
-    height: 500px;
+    width: 375px;
+    height: 475px;
     transition: all .4s ease-in-out;
     transform: rotate(5deg);
     filter: grayscale(.9);
@@ -210,6 +214,18 @@ img.polaroid {
     }
 }
 
+.paragraph.fourth {
+    position: relative;
+    z-index: 2;
+}
+
+.love-gif {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+}
+
 .paragraph {
     padding: 100px;
 }
@@ -241,4 +257,32 @@ h4, .slide-2-content {
 
 .slide-2-content {
     font-size: 24px;
+}
+
+.more-content {
+    width: 400px;
+}
+
+.swiper-slide.pics {
+    background: #FFFBEB;
+}
+
+.box {
+    border-radius: 10px;
+    background: #F0E9D2;
+    padding: 20px;
+}
+
+#index .kem-swiper .kemSwiper .swiper-wrapper .swiper-slide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#index .kem-swiper .kemSwiper .swiper-wrapper .swiper-slide img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
